@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TradeIt — frontend handoff</title>
+    <link rel="icon" href="assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="docs/guide.css" />
+  </head>
+  <body>
+    <header class="guide-wrap">
+      <a class="guide-brand" href="index.html"
+        ><img src="assets/icons/favicon.svg" alt="" width="34" height="34" />TradeIt<span
+          >FRONTEND HANDOFF</span
+        ></a
+      >
+    </header>
+    <main class="guide-wrap">
+      <section class="guide-hero">
+        <p class="eyebrow">YOUR DESIGN. READY TO BUILD.</p>
+        <h1>Everything in its place.</h1>
+        <p>
+          The complete TradeIt interface in readable HTML, CSS and JavaScript. Original design,
+          English content and a clear starting point for your team.
+        </p>
+        <div class="guide-actions">
+          <a class="guide-button" href="index.html"
+            >Open the application <span aria-hidden="true">↗</span></a
+          ><a class="guide-button secondary" href="README.md">Read the setup guide</a>
+        </div>
+        <div class="guide-stats">
+          <span><b>35</b> connected screens</span><span><b>0</b> runtime dependencies</span
+          ><span><b>100%</b> local assets</span>
+        </div>
+      </section>
+      <section class="guide-start">
+        <div>
+          <h2>Start here</h2>
+          <ol>
+            <li>Open <code>index.html</code> to use the interface.</li>
+            <li>Choose a screen below to find its source file.</li>
+            <li>Edit shared styles in <code>styles/styles.css</code>.</li>
+            <li>Connect services using the backend integration guide.</li>
+          </ol>
+        </div>
+        <aside>
+          <h3>A clear service boundary</h3>
+          <p>
+            This package includes working local interactions and sample data. Authentication,
+            payments, uploads, messaging and administration services are ready for your backend
+            integration.
+          </p>
+        </aside>
+      </section>
+      <nav class="guide-docs" aria-label="Developer documentation">
+        <a href="docs/SCREEN-MAP.md">Screen map ↗</a
+        ><a href="docs/ARCHITECTURE.md">Architecture ↗</a
+        ><a href="docs/DESIGN-SYSTEM.md">Design system ↗</a
+        ><a href="docs/BACKEND-INTEGRATION.md">Backend integration ↗</a
+        ><a href="docs/VALIDATION.md">Validation ↗</a
+        ><a href="docs/ASSET-CREDITS.md">Asset credits ↗</a>
+      </nav>
+      <section class="screen-section">
+        <h2>Discovery &amp; booking</h2>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/">Home <span aria-hidden="true">↗</span></a>
+            <p>Brand introduction, categories, featured listings and local discovery.</p>
+            <code>scripts/pages/home.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/explore"
+              >Search &amp; filters <span aria-hidden="true">↗</span></a
+            >
+            <p>Search items, choose a category, set a price limit and sort the catalogue.</p>
+            <code>scripts/pages/explore.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/explore-map"
+              >Explore on a map <span aria-hidden="true">↗</span></a
+            >
+            <p>Illustrated location view with listing pins and external Google Maps links.</p>
+            <code>scripts/pages/explore.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/product/camera"
+              >Listing details <span aria-hidden="true">↗</span></a
+            >
+            <p>Photo gallery, owner information, reviews, dates and rental cost breakdown.</p>
+            <code>scripts/pages/listing-details.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/booking/camera"
+              >Booking &amp; payment <span aria-hidden="true">↗</span></a
+            >
+            <p>Review selected dates, cost, deposit, message and rental terms.</p>
+            <code>scripts/pages/booking.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/booking-success"
+              >Booking confirmation <span aria-hidden="true">↗</span></a
+            >
+            <p>Confirmation summary with next steps and links to rentals and messages.</p>
+            <code>scripts/pages/booking-confirmation.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/how"
+              >How TradeIt works <span aria-hidden="true">↗</span></a
+            >
+            <p>Explain discovery, booking, pickup, return and sharing unused equipment.</p>
+            <code>scripts/pages/how-it-works.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/host/marko"
+              >Public profile &amp; reviews <span aria-hidden="true">↗</span></a
+            >
+            <p>Public host profile, trust information, listings and member reviews.</p>
+            <code>scripts/pages/member-profile.js</code>
+          </article>
+        </div>
+      </section>
+      <section class="screen-section">
+        <h2>Your account</h2>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/dashboard"
+              >Account overview <span aria-hidden="true">↗</span></a
+            >
+            <p>Rental activity, summary cards and shortcuts for a signed-in member.</p>
+            <code>scripts/pages/dashboard.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/rentals"
+              >My rentals <span aria-hidden="true">↗</span></a
+            >
+            <p>Active rentals, sent requests, completed rentals and owner-side views.</p>
+            <code>scripts/pages/my-rentals.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/rental/current"
+              >Rental details <span aria-hidden="true">↗</span></a
+            >
+            <p>Rental timeline, item, owner, agreement summary and condition reports.</p>
+            <code>scripts/pages/rental-details.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/handover"
+              >Pickup &amp; condition photos <span aria-hidden="true">↗</span></a
+            >
+            <p>Record pickup photos and confirm equipment and item condition.</p>
+            <code>scripts/pages/pickup-and-return.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/return"
+              >Return an item <span aria-hidden="true">↗</span></a
+            >
+            <p>Record return photos, confirm the checklist and continue to a review.</p>
+            <code>scripts/pages/pickup-and-return.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/review"
+              >Write a review <span aria-hidden="true">↗</span></a
+            >
+            <p>Select a star rating and write a review of the rental experience.</p>
+            <code>scripts/pages/write-review.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/listings"
+              >Manage listings <span aria-hidden="true">↗</span></a
+            >
+            <p>View owned listings, edit details and pause or reactivate a listing.</p>
+            <code>scripts/pages/my-listings.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/new-listing"
+              >Create a listing <span aria-hidden="true">↗</span></a
+            >
+            <p>Four steps: basic details, photos, price and availability, final review.</p>
+            <code>scripts/pages/listing-editor.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/edit-listing"
+              >Edit a listing <span aria-hidden="true">↗</span></a
+            >
+            <p>Reuse the four-step editor with a selected listing prefilled.</p>
+            <code>scripts/pages/listing-editor.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/messages"
+              >Messages <span aria-hidden="true">↗</span></a
+            >
+            <p>Select a conversation, review its rental context and send local messages.</p>
+            <code>scripts/pages/messages.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/saved"
+              >Saved listings <span aria-hidden="true">↗</span></a
+            >
+            <p>View saved items and remove favourites.</p>
+            <code>scripts/pages/saved-listings.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/profile"
+              >My profile <span aria-hidden="true">↗</span></a
+            >
+            <p>Own profile, account facts, reviews and profile-editing shortcut.</p>
+            <code>scripts/pages/member-profile.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/settings"
+              >Account settings <span aria-hidden="true">↗</span></a
+            >
+            <p>Personal details, security, notification and privacy panels.</p>
+            <code>scripts/pages/account-settings.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/verification"
+              >Identity verification <span aria-hidden="true">↗</span></a
+            >
+            <p>Personal verification status interface.</p>
+            <code>scripts/pages/identity-verification.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/payments"
+              >Payments &amp; payouts <span aria-hidden="true">↗</span></a
+            >
+            <p>Rental spending, earnings, sample transactions and payout overview.</p>
+            <code>scripts/pages/payments-and-payouts.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/notifications"
+              >Notifications <span aria-hidden="true">↗</span></a
+            >
+            <p>Activity feed with links to the relevant rental, message or account screen.</p>
+            <code>scripts/pages/notifications.js</code>
+          </article>
+        </div>
+      </section>
+      <section class="screen-section">
+        <h2>Access, support &amp; administration</h2>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/login"
+              >Sign in <span aria-hidden="true">↗</span></a
+            >
+            <p>Email and password, Google sign-in entry and guest navigation.</p>
+            <code>scripts/pages/authentication.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/register"
+              >Create an account <span aria-hidden="true">↗</span></a
+            >
+            <p>Account registration and acceptance of terms.</p>
+            <code>scripts/pages/authentication.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/forgot"
+              >Password recovery <span aria-hidden="true">↗</span></a
+            >
+            <p>Recovery email entry and a confirmation dialog.</p>
+            <code>scripts/pages/authentication.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/support"
+              >Help centre <span aria-hidden="true">↗</span></a
+            >
+            <p>Search FAQs, open the local FAQ assistant or create a support request.</p>
+            <code>scripts/pages/help-centre.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/tickets/new"
+              >New support request <span aria-hidden="true">↗</span></a
+            >
+            <p>Describe an issue, select its rental and reason, and attach evidence.</p>
+            <code>scripts/pages/create-support-request.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/tickets/current"
+              >Request status <span aria-hidden="true">↗</span></a
+            >
+            <p>Request details, progress, conversation and a reply form.</p>
+            <code>scripts/pages/support-request.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/admin"
+              >Admin overview <span aria-hidden="true">↗</span></a
+            >
+            <p>Platform metrics, activity and an overview of support work.</p>
+            <code>scripts/pages/admin-overview.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/admin/tickets"
+              >Manage support requests <span aria-hidden="true">↗</span></a
+            >
+            <p>Search requests and filter them by status and priority.</p>
+            <code>scripts/pages/admin-requests.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/admin/ticket/TI-0248"
+              >Dispute review &amp; evidence <span aria-hidden="true">↗</span></a
+            >
+            <p>Compare evidence, add internal notes and record a proposed outcome.</p>
+            <code>scripts/pages/admin-request-details.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/admin/listings"
+              >Listing moderation <span aria-hidden="true">↗</span></a
+            >
+            <p>Review queued listings, approve them or request changes.</p>
+            <code>scripts/pages/admin-listing-review.js</code>
+          </article>
+          <article class="guide-card">
+            <a class="screen-title" href="index.html#/admin/users"
+              >User management <span aria-hidden="true">↗</span></a
+            >
+            <p>Search members, inspect account details and add an administration note.</p>
+            <code>scripts/pages/admin-members.js</code>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="guide-wrap guide-footer">
+      TradeIt · HTML / CSS / JavaScript · English frontend source
+    </footer>
+  </body>
+</html>
