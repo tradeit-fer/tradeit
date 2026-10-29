@@ -1,5 +1,5 @@
 # Entity relation diagram
-:::mermaid
+```mermaid
 erDiagram
     users || -- |{ external_identities : has
     users |o -- || user_profiles : has
@@ -44,7 +44,7 @@ erDiagram
         int category_id FK
         string title
         string description
-        int price-cents
+        int price_cents
         string status
         timestamp created_at
         timestamp updated_at
@@ -86,4 +86,4 @@ erDiagram
         string comment
         timestamp created_at
     }
-:::
+```
