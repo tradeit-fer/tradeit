@@ -1,3 +1,4 @@
+# Entity relation diagram
 :::mermaid
 erDiagram
     users || -- |{ external_identities : has
@@ -9,6 +10,9 @@ erDiagram
     listings || -- o{ rental_request : is_requested
     rentals }o -- || rental_request : is_rented
     rental_terms || -- || rentals : specifies
+    users ||--o{ reviews : writes
+    users ||--o{ reviews : receives
+    rentals ||--o{ reviews : has
     users {
         string id PK
         string name
@@ -42,6 +46,8 @@ erDiagram
         string description
         int price-cents
         string status
+        timestamp created_at
+        timestamp updated_at
     }
     listing_location{
         int listing_id PK
@@ -69,5 +75,15 @@ erDiagram
         int rental_amount_cents
         int platform_fee_cents
         int total_amount_cents
+    }
+    reviews {
+        int id PK
+        int rental_id FK
+        string author_id FK
+        string subject_id FK
+        string subject_role
+        int rating
+        string comment
+        timestamp created_at
     }
 :::
