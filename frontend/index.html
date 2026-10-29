@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#184d42" />
+    <meta
+      name="description"
+      content="TradeIt — more experiences, less stuff. Rent items and services from people nearby."
+    />
+    <title>TradeIt — more experiences, less stuff.</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <!-- Classic deferred scripts keep the project build-free and allow opening index.html directly. Preserve this order. -->
+    <script defer src="scripts/config.js"></script>
+    <script defer src="scripts/core/dom.js"></script>
+    <script defer src="scripts/core/formatters.js"></script>
+    <script defer src="scripts/components/icons.js"></script>
+    <script defer src="scripts/components/ui.js"></script>
+    <script defer src="scripts/data/listings.js"></script>
+    <script defer src="scripts/data/navigation.js"></script>
+    <script defer src="scripts/data/support.js"></script>
+    <script defer src="scripts/core/state.js"></script>
+    <script defer src="scripts/components/layout.js"></script>
+    <script defer src="scripts/components/marketplace.js"></script>
+    <script defer src="scripts/components/rentals.js"></script>
+    <script defer src="scripts/components/support.js"></script>
+    <script defer src="scripts/pages/home.js"></script>
+    <script defer src="scripts/pages/explore.js"></script>
+    <script defer src="scripts/pages/listing-details.js"></script>
+    <script defer src="scripts/pages/booking.js"></script>
+    <script defer src="scripts/pages/booking-confirmation.js"></script>
+    <script defer src="scripts/pages/how-it-works.js"></script>
+    <script defer src="scripts/pages/dashboard.js"></script>
+    <script defer src="scripts/pages/my-rentals.js"></script>
+    <script defer src="scripts/pages/rental-details.js"></script>
+    <script defer src="scripts/pages/pickup-and-return.js"></script>
+    <script defer src="scripts/pages/write-review.js"></script>
+    <script defer src="scripts/pages/my-listings.js"></script>
+    <script defer src="scripts/pages/listing-editor.js"></script>
+    <script defer src="scripts/pages/saved-listings.js"></script>
+    <script defer src="scripts/pages/messages.js"></script>
+    <script defer src="scripts/pages/member-profile.js"></script>
+    <script defer src="scripts/pages/account-settings.js"></script>
+    <script defer src="scripts/pages/identity-verification.js"></script>
+    <script defer src="scripts/pages/payments-and-payouts.js"></script>
+    <script defer src="scripts/pages/notifications.js"></script>
+    <script defer src="scripts/pages/help-centre.js"></script>
+    <script defer src="scripts/pages/create-support-request.js"></script>
+    <script defer src="scripts/pages/support-request.js"></script>
+    <script defer src="scripts/pages/authentication.js"></script>
+    <script defer src="scripts/pages/admin-overview.js"></script>
+    <script defer src="scripts/pages/admin-requests.js"></script>
+    <script defer src="scripts/pages/admin-request-details.js"></script>
+    <script defer src="scripts/pages/admin-listing-review.js"></script>
+    <script defer src="scripts/pages/admin-members.js"></script>
+    <script defer src="scripts/core/dialogs.js"></script>
+    <script defer src="scripts/core/router.js"></script>
+    <script defer src="scripts/core/events.js"></script>
+    <script defer src="scripts/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The router mounts the selected page here. -->
+    <div id="app"></div>
+    <!-- Dialogs remain outside the page content so they survive page-level layout changes. -->
+    <div id="modal-root"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <noscript
+      ><p>Enable JavaScript to browse TradeIt. Read README.md for setup instructions.</p></noscript
+    >
+  </body>
+</html>

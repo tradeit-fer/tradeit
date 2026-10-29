@@ -1,0 +1,247 @@
+[
+  {
+    "group": "Discovery & booking",
+    "route": "#/",
+    "title": "Home",
+    "file": "scripts/pages/home.js",
+    "purpose": "Brand introduction, categories, featured listings and local discovery."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/explore",
+    "title": "Search & filters",
+    "file": "scripts/pages/explore.js",
+    "purpose": "Search items, choose a category, set a price limit and sort the catalogue."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/explore-map",
+    "title": "Explore on a map",
+    "file": "scripts/pages/explore.js",
+    "purpose": "Illustrated location view with listing pins and external Google Maps links."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/product/camera",
+    "title": "Listing details",
+    "file": "scripts/pages/listing-details.js",
+    "purpose": "Photo gallery, owner information, reviews, dates and rental cost breakdown."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/booking/camera",
+    "title": "Booking & payment",
+    "file": "scripts/pages/booking.js",
+    "purpose": "Review selected dates, cost, deposit, message and rental terms."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/booking-success",
+    "title": "Booking confirmation",
+    "file": "scripts/pages/booking-confirmation.js",
+    "purpose": "Confirmation summary with next steps and links to rentals and messages."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/how",
+    "title": "How TradeIt works",
+    "file": "scripts/pages/how-it-works.js",
+    "purpose": "Explain discovery, booking, pickup, return and sharing unused equipment."
+  },
+  {
+    "group": "Discovery & booking",
+    "route": "#/host/marko",
+    "title": "Public profile & reviews",
+    "file": "scripts/pages/member-profile.js",
+    "purpose": "Public host profile, trust information, listings and member reviews."
+  },
+  {
+    "group": "Your account",
+    "route": "#/dashboard",
+    "title": "Account overview",
+    "file": "scripts/pages/dashboard.js",
+    "purpose": "Rental activity, summary cards and shortcuts for a signed-in member."
+  },
+  {
+    "group": "Your account",
+    "route": "#/rentals",
+    "title": "My rentals",
+    "file": "scripts/pages/my-rentals.js",
+    "purpose": "Active rentals, sent requests, completed rentals and owner-side views."
+  },
+  {
+    "group": "Your account",
+    "route": "#/rental/current",
+    "title": "Rental details",
+    "file": "scripts/pages/rental-details.js",
+    "purpose": "Rental timeline, item, owner, agreement summary and condition reports."
+  },
+  {
+    "group": "Your account",
+    "route": "#/handover",
+    "title": "Pickup & condition photos",
+    "file": "scripts/pages/pickup-and-return.js",
+    "purpose": "Record pickup photos and confirm equipment and item condition."
+  },
+  {
+    "group": "Your account",
+    "route": "#/return",
+    "title": "Return an item",
+    "file": "scripts/pages/pickup-and-return.js",
+    "purpose": "Record return photos, confirm the checklist and continue to a review."
+  },
+  {
+    "group": "Your account",
+    "route": "#/review",
+    "title": "Write a review",
+    "file": "scripts/pages/write-review.js",
+    "purpose": "Select a star rating and write a review of the rental experience."
+  },
+  {
+    "group": "Your account",
+    "route": "#/listings",
+    "title": "Manage listings",
+    "file": "scripts/pages/my-listings.js",
+    "purpose": "View owned listings, edit details and pause or reactivate a listing."
+  },
+  {
+    "group": "Your account",
+    "route": "#/new-listing",
+    "title": "Create a listing",
+    "file": "scripts/pages/listing-editor.js",
+    "purpose": "Four steps: basic details, photos, price and availability, final review."
+  },
+  {
+    "group": "Your account",
+    "route": "#/edit-listing",
+    "title": "Edit a listing",
+    "file": "scripts/pages/listing-editor.js",
+    "purpose": "Reuse the four-step editor with a selected listing prefilled."
+  },
+  {
+    "group": "Your account",
+    "route": "#/messages",
+    "title": "Messages",
+    "file": "scripts/pages/messages.js",
+    "purpose": "Select a conversation, review its rental context and send local messages."
+  },
+  {
+    "group": "Your account",
+    "route": "#/saved",
+    "title": "Saved listings",
+    "file": "scripts/pages/saved-listings.js",
+    "purpose": "View saved items and remove favourites."
+  },
+  {
+    "group": "Your account",
+    "route": "#/profile",
+    "title": "My profile",
+    "file": "scripts/pages/member-profile.js",
+    "purpose": "Own profile, account facts, reviews and profile-editing shortcut."
+  },
+  {
+    "group": "Your account",
+    "route": "#/settings",
+    "title": "Account settings",
+    "file": "scripts/pages/account-settings.js",
+    "purpose": "Personal details, security, notification and privacy panels."
+  },
+  {
+    "group": "Your account",
+    "route": "#/verification",
+    "title": "Identity verification",
+    "file": "scripts/pages/identity-verification.js",
+    "purpose": "Personal verification status interface."
+  },
+  {
+    "group": "Your account",
+    "route": "#/payments",
+    "title": "Payments & payouts",
+    "file": "scripts/pages/payments-and-payouts.js",
+    "purpose": "Rental spending, earnings, sample transactions and payout overview."
+  },
+  {
+    "group": "Your account",
+    "route": "#/notifications",
+    "title": "Notifications",
+    "file": "scripts/pages/notifications.js",
+    "purpose": "Activity feed with links to the relevant rental, message or account screen."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/login",
+    "title": "Sign in",
+    "file": "scripts/pages/authentication.js",
+    "purpose": "Email and password, Google sign-in entry and guest navigation."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/register",
+    "title": "Create an account",
+    "file": "scripts/pages/authentication.js",
+    "purpose": "Account registration and acceptance of terms."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/forgot",
+    "title": "Password recovery",
+    "file": "scripts/pages/authentication.js",
+    "purpose": "Recovery email entry and a confirmation dialog."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/support",
+    "title": "Help centre",
+    "file": "scripts/pages/help-centre.js",
+    "purpose": "Search FAQs, open the local FAQ assistant or create a support request."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/tickets/new",
+    "title": "New support request",
+    "file": "scripts/pages/create-support-request.js",
+    "purpose": "Describe an issue, select its rental and reason, and attach evidence."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/tickets/current",
+    "title": "Request status",
+    "file": "scripts/pages/support-request.js",
+    "purpose": "Request details, progress, conversation and a reply form."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/admin",
+    "title": "Admin overview",
+    "file": "scripts/pages/admin-overview.js",
+    "purpose": "Platform metrics, activity and an overview of support work."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/admin/tickets",
+    "title": "Manage support requests",
+    "file": "scripts/pages/admin-requests.js",
+    "purpose": "Search requests and filter them by status and priority."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/admin/ticket/TI-0248",
+    "title": "Dispute review & evidence",
+    "file": "scripts/pages/admin-request-details.js",
+    "purpose": "Compare evidence, add internal notes and record a proposed outcome."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/admin/listings",
+    "title": "Listing moderation",
+    "file": "scripts/pages/admin-listing-review.js",
+    "purpose": "Review queued listings, approve them or request changes."
+  },
+  {
+    "group": "Access, support & administration",
+    "route": "#/admin/users",
+    "title": "User management",
+    "file": "scripts/pages/admin-members.js",
+    "purpose": "Search members, inspect account details and add an administration note."
+  }
+]
