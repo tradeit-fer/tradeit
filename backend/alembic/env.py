@@ -5,6 +5,20 @@ from sqlalchemy import pool
 
 from alembic import context
 
+from src.database import Base
+from src.models.users import User
+from src.models.listings import Listing
+from src.models.categories import Category
+from src.models.external_identities import ExternalIdentity
+from src.models.listing_location import ListingLocation
+from src.models.rental_request import RentalRequest
+from src.models.rental_terms import RentalTerms
+from src.models.rentals import Rental
+from src.models.reviews import Review
+from src.models.user_profiles import UserProfile
+
+target_metadata = Base.metadata
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -18,13 +32,22 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+config.set_main_option(
+    "sqlalchemy.url",
+    os.getenv("DATABASE_URL").replace("%", "%%")
+)
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.

@@ -26,9 +26,11 @@ erDiagram
         string user_id FK
         string provider
         string provider_subject
+        timestamp expires
     }
     user_profiles{
-        string user_id PK,FK
+        string id PK
+        string user_id FK
         string display_name 
         string bio
         string avatar_key

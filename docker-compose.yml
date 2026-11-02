@@ -2,10 +2,10 @@
 services:
   db:
     image: postgres:16
-    container_name: webapp_db
+    container_name: tradeIt_db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: webapp
+      POSTGRES_DB: tradeIt
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: dev_password
     ports:

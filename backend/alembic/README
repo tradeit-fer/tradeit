@@ -1,1 +1,122 @@
-Generic single-database configuration.
+# Alembic – Database Migrations
+
+## 1. Overview
+
+Alembic is a database migration tool used to manage changes to the PostgreSQL database schema.
+
+It works together with SQLAlchemy ORM and allows migrations to be automatically generated based on changes made to SQLAlchemy models.
+
+Migrations make it possible to track database schema changes without manually deleting and recreating database tables.
+
+## 2. Directory Structure
+
+```text
+alembic/
+├── README.md
+├── env.py
+├── script.py.mako
+└── versions/
+    └── xxxx_initial_migration.py
+```
+
+- `env.py` – contains Alembic configuration and connects Alembic to SQLAlchemy models.
+- `script.py.mako` – template used by Alembic to generate migration files.
+- `versions/` – stores all generated database migration files.
+- `README.md` – documentation for managing database migrations.
+
+The main Alembic configuration file, `alembic.ini`, is located in the `backend` directory.
+
+## 3. Connecting Alembic to SQLAlchemy Models
+
+The `env.py` file imports the SQLAlchemy `Base` class and model metadata.
+
+The `target_metadata` variable is used to compare the current database schema with the SQLAlchemy models.
+
+This allows Alembic to detect new tables, columns, and other schema changes and generate the appropriate migration scripts.
+
+## 4. Generating a New Migration
+
+Whenever a SQLAlchemy model is modified, a new migration should be generated.
+
+Commands must be executed from the `backend` directory:
+
+```powershell
+python -m alembic revision --autogenerate -m "describe your change"
+```
+
+Example:
+
+```powershell
+python -m alembic revision --autogenerate -m "add user fields"
+```
+
+Alembic automatically compares the models with the existing database schema and generates a migration file in the `versions/` directory.
+
+**Important:** Generated migration files must always be reviewed manually before applying them, because autogeneration may not detect every change correctly.
+
+## 5. Applying Migrations
+
+To apply all pending migrations and update the database to the latest version, run:
+
+```powershell
+python -m alembic upgrade head
+```
+
+This command applies the schema changes to the PostgreSQL database.
+
+## 6. Checking the Current Database Version
+
+To check which migration is currently applied:
+
+```powershell
+python -m alembic current
+```
+
+To view the migration history:
+
+```powershell
+python -m alembic history
+```
+
+## 7. Rolling Back Migrations
+
+To roll back the database by one migration:
+
+```powershell
+python -m alembic downgrade -1
+```
+
+To roll back all migrations to the base state:
+
+```powershell
+python -m alembic downgrade base
+```
+
+These commands may remove database tables or data, so they should be used carefully.
+
+## 8. Best Practices
+
+- Avoid making manual database schema changes when they can be managed through SQLAlchemy models and migrations.
+- Always review generated migration files before applying them.
+- Do not delete old migration files, as they are part of the database change history.
+- Use clear and descriptive names for new migrations.
+- Run migration commands from the `backend` directory.
+- Keep migration files under version control.
+
+## 9. Current Project Status
+
+Alembic has been successfully configured in the Tradeit project, and the initial database migration has been generated.
+
+The initial migration was successfully applied to the PostgreSQL database using:
+
+```powershell
+python -m alembic upgrade head
+```
+
+The current database migration version was verified using:
+
+```powershell
+python -m alembic current
+```
+
+Alembic returned the `head` revision, confirming that the database is up to date with the latest applied migration.

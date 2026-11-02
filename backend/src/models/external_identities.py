@@ -1,7 +1,7 @@
-from sqlalchemy import ForeignKey, String, UniqueConstraint
+from sqlalchemy import ForeignKey, String, UniqueConstraint, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.database import Base
+from src.database import Base
 
 
 class ExternalIdentity(Base):
@@ -24,8 +24,15 @@ class ExternalIdentity(Base):
     )
 
     provider: Mapped[str] = mapped_column(String(100), nullable=False)
+
     provider_subject: Mapped[str] = mapped_column(
         String(255), nullable=False
+    )
+
+    expires: Mapped[DateTime] = mapped_column(
+        DateTime(timezone=True),
+        nullable=False,
+        server_default=func.current_timestamp(),
     )
 
     user: Mapped["User"] = relationship(

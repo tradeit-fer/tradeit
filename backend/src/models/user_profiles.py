@@ -1,15 +1,19 @@
 from sqlalchemy import ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.database import Base
+from src.database import Base
 
 class UserProfile(Base):
     __tablename__ = "user_profiles"
 
+    id: Mapped[str] = mapped_column(
+        String(255),
+        primary_key=True
+    )
+
     user_id: Mapped[str] = mapped_column(
         String(255),
-        ForeignKey("users.id", ondelete="CASCADE"),
-        primary_key=True,
+        ForeignKey("users.id", ondelete="CASCADE")
     )
 
     display_name: Mapped[str | None] = mapped_column(String(255))
