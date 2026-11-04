@@ -80,7 +80,7 @@ docker compose logs -f db
 To access the PostgreSQL database through the terminal:
 
 ```powershell
-docker exec -it tradeIt_db psql -U app_user -d webapp
+docker exec -it tradeIt_db psql -U app_user -d tradeIt
 ```
 
 To list all database tables:
@@ -102,7 +102,7 @@ The backend connects to PostgreSQL using the `DATABASE_URL` environment variable
 Example:
 
 ```env
-DATABASE_URL=postgresql+psycopg://app_user:dev_password@localhost:5432/webapp
+DATABASE_URL=postgresql+psycopg://app_user:dev_password@localhost:5432/tradeIt
 ```
 
 The connection string contains:
@@ -112,6 +112,6 @@ The connection string contains:
 - Password: `dev_password`
 - Host: `localhost`
 - Port: `5432`
-- Database name: `webapp`
+- Database name: `tradeIt`
 
 Do not commit the `.env` file or real database credentials to version control.
