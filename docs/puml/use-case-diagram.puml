@@ -48,7 +48,6 @@ rectangle "Sustav TradeIt" {
     (UC-07\nPregledati vlastite\nobjave) as UC_MyPosts
     (UC-08\nModeriranje objava) as UC_Moderate
     
-
 }
 
 Admin -- UC_Login
