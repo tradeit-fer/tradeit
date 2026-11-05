@@ -27,6 +27,9 @@ actor Admin as "Admin"
 User -|> Visitor
 Admin -|> User
 
+Admin -[hidden]down-> User
+User -[hidden]down-> Visitor
+
 
 ' Vanjski aktori
 actor Auth as "Pružatelj identiteta\n(OAuth)" <<external system>>
@@ -43,10 +46,12 @@ rectangle "Sustav TradeIt" {
     (UC-05\nProvjera podataka objave) as UC_ValidatePost
     (UC-06\nDodavanje fotografije) as UC_UploadPhoto
     (UC-07\nPregledati vlastite\nobjave) as UC_MyPosts
+    (UC-08\nModeriranje objava) as UC_Moderate
     
 
 }
-
+Admin -- UC_Login
+Admin -- UC_Moderate
 Visitor -- UC_Login
 User -- UC_Browse
 User -- UC_Create
