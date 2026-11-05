@@ -50,6 +50,7 @@ rectangle "Sustav TradeIt" {
     
 
 }
+
 Admin -- UC_Login
 Admin -- UC_Moderate
 Visitor -- UC_Login
