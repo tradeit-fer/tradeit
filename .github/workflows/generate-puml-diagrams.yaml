@@ -23,8 +23,6 @@ name: Generate PlantUML diagrams
 ## Workflow runs on direct pushes targeting diagram sources or via manual dispatch.
 on:
   push:
-    branches:
-      - main
     paths:
       - "docs/puml/**/*.puml"
       - ".github/workflows/generate-puml-diagrams.yaml"
