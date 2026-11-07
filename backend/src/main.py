@@ -1,25 +1,33 @@
 
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
+
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
-from src.dependencies import get_db
+from src.dependencies import get_db # dohvaćanje sesije baze podataka
 
-app = FastAPI()
+app = FastAPI(
+    title="TradeIt API",
+    description="API specifikacija za TradeIt web aplikaciju",
+    version="1.0.0"
+)
 
+# frontend origin
+origins = [
+    "http://localhost:8000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,   # dopušteno slanje osjetljivih autentifikacijskih podataka
+    allow_methods = ["*"],    # dopuštene GET, PUT, PATCH, POST, DELETE,...
+    allow_headers = ["*"],  # dopušteni Authorization, Content-Type, itd...
+)
 
 @app.get("/")
 def home():
     return {
         "message": "Backend radi!"
-    }
-
-# testna ruta za provjeru povezansoti s bazom
-@app.get("/db-check")
-def check_database(db: Session = Depends(get_db)):
-    result = db.execute(text("SELECT 1")).scalar()
-
-    return {
-        "database": "connected",
-        "result": result
     }
