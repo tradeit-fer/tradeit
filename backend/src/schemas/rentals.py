@@ -34,4 +34,3 @@ class HandoverCreate(BaseModel):
         default = [],
         example = ["media_id_789", "media_id_012"]
     )
-
