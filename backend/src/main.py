@@ -1,13 +1,16 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Depends
 from starlette.middleware.sessions import SessionMiddleware
 from authlib.integrations.starlette_client import OAuth
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from src.dependencies import get_db # dohvaćanje sesije baze podataka
+from sqlalchemy.orm import Session
+
+from src.services.auth import get_or_create_google_user
 
 env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(env_path)
@@ -59,15 +62,18 @@ async def google_login(request: Request):
    return await oauth.google.authorize_redirect(request, redirect_uri)
 
 @app.get("/api/v1/auth/google/callback")
-async def google_callback(request: Request):
+async def google_callback(request: Request, db: Session = Depends(get_db),):
    token = await oauth.google.authorize_access_token(request)
 
-   user = token["userinfo"]
+   google_user = token["userinfo"]
+
+   user, is_new = get_or_create_google_user(db, google_user,)
    return {
-      "google_sub":user["sub"],
-      "email": user.get("email"),
-      "email_verified": user.get("email_verified"),
-      "name": user.get("name")
+      "user_id": user.id,
+      "name": user.name,
+      "email": user.email,
+      "role": user.role,
+      "is_new_user": is_new,
    }
 
 @app.get("/")

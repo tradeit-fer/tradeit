@@ -1,6 +1,6 @@
 from sqlalchemy import ForeignKey, String, UniqueConstraint, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-
+from datetime import datetime
 from src.database import Base
 
 
@@ -29,11 +29,15 @@ class ExternalIdentity(Base):
         String(255), nullable=False
     )
 
-    expires: Mapped[DateTime] = mapped_column(
-        DateTime(timezone=True),
-        nullable=False,
-        server_default=func.current_timestamp(),
+    expires: Mapped[datetime | None] = mapped_column(
+    DateTime(timezone=True),
+    nullable=True,
     )
+#    expires: Mapped[DateTime] = mapped_column(
+#        DateTime(timezone=True),
+#        nullable=False,
+#        server_default=func.current_timestamp(),
+#    )
 
     user: Mapped["User"] = relationship(
         back_populates="external_identities"
