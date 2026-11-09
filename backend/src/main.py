@@ -34,8 +34,8 @@ env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(env_path)
 
 app = FastAPI(
-    title="TradeIt API",
-    description="API specifikacija za TradeIt web aplikaciju",
+    title="RentIt API",
+    description="API specifikacija za RentIt web aplikaciju",
     version="1.0.0"
 )
 
