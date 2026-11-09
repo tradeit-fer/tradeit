@@ -28,6 +28,7 @@ from src.services.session_service import (
     verify_csrf,
     revoke_session,
 )
+from src.authorization import require_admin
 
 env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(env_path)
@@ -153,4 +154,11 @@ def logout(
 
    return{
       "message": "Succesfully logged out"
+   }
+
+@app.get("/api/v1/admin/test")
+def admin_test(admin: User = Depends(require_admin),):
+   return {
+      "message": "Welcome, administrator!",
+      "user_id": admin.id,
    }
