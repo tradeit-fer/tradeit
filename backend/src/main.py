@@ -8,11 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from src.dependencies import get_db # dohvaćanje sesije baze podataka
-from sqlalchemy.orm import Session
-
-from src.services.auth import get_or_create_google_user
 from fastapi import Response, Depends
-from sqlalchemy.orm import Session
 
 from src.dependencies import get_db
 from src.services.auth import get_or_create_google_user
