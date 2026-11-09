@@ -16,6 +16,7 @@ from src.models.rental_terms import RentalTerms
 from src.models.rentals import Rental
 from src.models.reviews import Review
 from src.models.user_profiles import UserProfile
+from src.models.auth_sessions import AuthSession
 
 target_metadata = Base.metadata
 
