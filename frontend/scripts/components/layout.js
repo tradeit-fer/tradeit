@@ -9,9 +9,9 @@
  * @returns {string} HTML for this view.
  */
 function renderBrandLogo() {
-  return /* HTML */ `<a class="logo" href="#/" aria-label="TradeIt home">
+  return /* HTML */ `<a class="logo" href="#/" aria-label="RentIt home">
     <span class="mark">${renderIcon("repeat")}</span>
-    <div>Trade<span>It</span></div>
+    <div>Rent<span>It</span></div>
   </a>`;
 }
 
@@ -67,7 +67,7 @@ function renderSiteFooter() {
         </div>
       </div>
       <div class="between mt20">
-        <p>© 2026 TradeIt. Things we share. Stories we make.</p>
+        <p>© 2026 RentIt. Things we share. Stories we make.</p>
         <p>English · EUR €</p>
       </div>
     </div>
@@ -102,7 +102,7 @@ function renderAccountSidebar(admin = false) {
         <p>${admin ? "Administrator" : "Personal account"}</p>
       </div>
     </div>
-    <div class="nav-section-label">${admin ? "WORKSPACE" : "MY TRADEIT"}</div>
+    <div class="nav-section-label">${admin ? "WORKSPACE" : "MY RENTIT"}</div>
     ${nav.map(([r, l, i]) => /* HTML */ `<a href="#/${r}" class="side-link ${isNavigationActive(r) ? "active" : ""}">${renderIcon(i)}${l}${r === "messages" ? "<b>2</b>" : r === "admin/tickets" ? "<b>12</b>" : ""}</a>`).join("")}
     <div class="nav-section-label">${admin ? "MEMBER AREA" : "EXPLORE"}</div>
     <a class="side-link" href="#/">${renderIcon("search")}Back to exploring</a>

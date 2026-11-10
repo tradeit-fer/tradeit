@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the home screen using the shared TradeIt design system.
+ * Render the home screen using the shared RentIt design system.
  * @returns {string} HTML for this view.
  */
 function renderHomePage() {
@@ -76,7 +76,7 @@ function renderHomePage() {
       </section>
       <section class="section">${renderTrustBenefits()}</section>
       <section class="section">
-        ${renderSectionHeading("Only need it sometimes?", "That is what TradeIt is for.", "explore", "Browse listings")}
+        ${renderSectionHeading("Only need it sometimes?", "That is what RentIt is for.", "explore", "Browse listings")}
         <div class="product-grid">${sampleListings.slice(4).map(renderListingCard).join("")}</div>
       </section>
       <section class="owner-banner">

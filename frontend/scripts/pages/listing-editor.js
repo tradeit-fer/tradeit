@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the listing editor screen using the shared TradeIt design system.
+ * Render the listing editor screen using the shared RentIt design system.
  * @param {*} edit See docs/ARCHITECTURE.md for data flow and page variants.
  * @returns {string} HTML for this view.
  */

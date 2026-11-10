@@ -34,7 +34,7 @@ const screenGroups = [
       ["product/camera", "Listing details", "camera"],
       ["booking/camera", "Booking & payment", "credit"],
       ["booking-success", "Booking confirmation", "check"],
-      ["how", "How TradeIt works", "repeat"],
+      ["how", "How RentIt works", "repeat"],
       ["host/marko", "Public profile & reviews", "user"],
     ],
   ],

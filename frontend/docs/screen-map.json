@@ -44,7 +44,7 @@
   {
     "group": "Discovery & booking",
     "route": "#/how",
-    "title": "How TradeIt works",
+    "title": "How RentIt works",
     "file": "scripts/pages/how-it-works.js",
     "purpose": "Explain discovery, booking, pickup, return and sharing unused equipment."
   },
