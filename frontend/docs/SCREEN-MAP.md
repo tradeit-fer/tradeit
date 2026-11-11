@@ -12,7 +12,7 @@ Open any route through `index.html#/…` or the **All screens** directory. Page 
 | Listing details | `#/product/camera` | `listing-details.js` | Photo gallery, owner information, reviews, dates and rental cost breakdown. |
 | Booking & payment | `#/booking/camera` | `booking.js` | Review selected dates, cost, deposit, message and rental terms. |
 | Booking confirmation | `#/booking-success` | `booking-confirmation.js` | Confirmation summary with next steps and links to rentals and messages. |
-| How TradeIt works | `#/how` | `how-it-works.js` | Explain discovery, booking, pickup, return and sharing unused equipment. |
+| How RentIt works | `#/how` | `how-it-works.js` | Explain discovery, booking, pickup, return and sharing unused equipment. |
 | Public profile & reviews | `#/host/marko` | `member-profile.js` | Public host profile, trust information, listings and member reviews. |
 
 ## Your account

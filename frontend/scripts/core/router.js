@@ -152,6 +152,6 @@ function renderCurrentRoute() {
           admin: "Administration",
           support: "Help & support",
         }[base] || "Your next great plan") + " · "
-      : "") + "TradeIt";
+      : "") + "RentIt";
   if (base === "product" || base === "booking") updateBookingPrice();
 }

@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the support request screen using the shared TradeIt design system.
+ * Render the support request screen using the shared RentIt design system.
  * @returns {string} HTML for this view.
  */
 function renderSupportRequestPage() {
@@ -38,7 +38,7 @@ function renderSupportRequestPage() {
               <div class="host-mini">
                 <span class="avatar" style="background:#e3edd5;color:#52713c">T</span>
                 <div>
-                  <h4>TradeIt support</h4>
+                  <h4>RentIt support</h4>
                   <p>${t ? "Automatic acknowledgement" : "10 October · 14:10"}</p>
                 </div>
               </div>

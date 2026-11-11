@@ -11,7 +11,7 @@ function createApp(saved) {
   const consoleBridge = new VirtualConsole();
   consoleBridge.on("jsdomError", (e) => errors.push(e.message));
   const dom = new JSDOM(fs.readFileSync(path.join(root, "index.html"), "utf8"), {
-    url: "https://tradeit.example/",
+    url: "https://rentit.example/",
     runScripts: "outside-only",
     pretendToBeVisual: true,
     virtualConsole: consoleBridge,
@@ -20,7 +20,7 @@ function createApp(saved) {
   w.scrollTo = () => {};
   w.HTMLElement.prototype.scrollIntoView = () => {};
   w.URL.createObjectURL = () => "blob:sample-image";
-  if (saved) w.localStorage.setItem("tradeit.frontend.v1", saved);
+  if (saved) w.localStorage.setItem("rentit.frontend.v1", saved);
   const context = dom.getInternalVMContext();
   for (const tag of w.document.querySelectorAll("script[src]")) {
     const source = tag.getAttribute("src");
@@ -129,7 +129,7 @@ test("English catalogue search, filters and persistent saved listings", () => {
     a.click('[data-action="reset-filters"]');
     a.click('[data-action="save"][data-id="camera"]');
     assert.equal(a.evaluate('appState.saved.includes("camera")'), false);
-    const b = createApp(a.w.localStorage.getItem("tradeit.frontend.v1"));
+    const b = createApp(a.w.localStorage.getItem("rentit.frontend.v1"));
     try {
       assert.equal(b.evaluate('appState.saved.includes("camera")'), false);
     } finally {

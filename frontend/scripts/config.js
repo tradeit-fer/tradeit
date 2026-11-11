@@ -6,7 +6,7 @@
 "use strict";
 const APP_CONFIG = Object.freeze({
   // Change when the persisted state schema changes.
-  storageKey: "tradeit.frontend.v1",
+  storageKey: "rentit.frontend.v1",
   // Keep enabled while reviewing the 35 screens; disable for the final customer UI.
   showScreenNavigator: true,
   locale: "en-GB",

@@ -310,7 +310,7 @@ document.addEventListener("click", async (event) => {
               ${renderIcon("shield")}2. Redirect securely to your verification provider.
             </div>
             <div class="notice">
-              ${renderIcon("check")}3. Return to TradeIt with the verification result.
+              ${renderIcon("check")}3. Return to RentIt with the verification result.
             </div>
           </div>
           <p class="small mt20">This preview does not accept real identity documents.</p>
@@ -388,7 +388,7 @@ document.addEventListener("click", async (event) => {
       break;
     case "assistant":
       showModal(
-        /* HTML */ `${renderDialogHeading("Your TradeIt assistant")}
+        /* HTML */ `${renderDialogHeading("Your RentIt assistant")}
           <p>A local FAQ assistant for common questions.</p>
           <div id="assistant-conversation" class="stack">
             <div class="notice">
@@ -411,7 +411,7 @@ document.addEventListener("click", async (event) => {
       break;
     case "google-login":
       navigateTo("dashboard");
-      showToast("Welcome to TradeIt. Google sign-in is not connected.");
+      showToast("Welcome to RentIt. Google sign-in is not connected.");
       break;
     case "password": {
       const p = selectElement("#auth-password");
@@ -655,7 +655,7 @@ document.addEventListener("submit", (event) => {
         break;
       }
       navigateTo("dashboard");
-      showToast("Welcome to TradeIt.");
+      showToast("Welcome to RentIt.");
       break;
     case "forgot-form":
       showModal(

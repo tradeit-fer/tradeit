@@ -1,6 +1,6 @@
 # Asset credits
 
-The photographs, typography and SVG assets are retained from the original TradeIt design. All assets are local, so viewing the interface does not request images or fonts from third-party servers.
+The photographs, typography and SVG assets are retained from the original RentIt design. All assets are local, so viewing the interface does not request images or fonts from third-party servers.
 
 ## Photography
 
@@ -29,4 +29,4 @@ DM Sans and Manrope are bundled with their original Open Font License notices in
 
 ## Icons and illustration
 
-The TradeIt mark, calculator illustration and inline interface icon paths are inherited from the original project. `assets/icons/favicon.svg` is the application icon; `assets/images/calculator.svg` is the catalogue illustration; `scripts/components/icons.js` contains the interface icon paths.
+The RentIt mark, calculator illustration and inline interface icon paths are inherited from the original project. `assets/icons/favicon.svg` is the application icon; `assets/images/calculator.svg` is the catalogue illustration; `scripts/components/icons.js` contains the interface icon paths.

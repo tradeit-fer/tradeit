@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the how it works screen using the shared TradeIt design system.
+ * Render the how it works screen using the shared RentIt design system.
  * @returns {string} HTML for this view.
  */
 function renderHowItWorksPage() {
@@ -13,7 +13,7 @@ function renderHowItWorksPage() {
     /* HTML */ `<section class="help-hero mt28">
         <div class="eyebrow">GOOD THINGS GO AROUND</div>
         <h1 class="mt12">Need it for a day?<br />It does not have to be forever.</h1>
-        <p>TradeIt connects people who need things with people who already have them.</p>
+        <p>RentIt connects people who need things with people who already have them.</p>
         ${renderLink("explore", "Explore listings", "arrow")}
       </section>
       <section class="grid3">

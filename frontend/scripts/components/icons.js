@@ -1,6 +1,6 @@
 /**
  * @file scripts/components/icons.js
- * Original TradeIt SVG icon set. Every icon is decorative; its button or link supplies the accessible name.
+ * Original RentIt SVG icon set. Every icon is decorative; its button or link supplies the accessible name.
  */
 "use strict";
 

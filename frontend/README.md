@@ -1,6 +1,6 @@
-# TradeIt frontend
+# RentIt frontend
 
-An English, build-free HTML/CSS/JavaScript handoff of the existing TradeIt design. The original forest-green palette, warm backgrounds, photography, typography, cards and responsive layouts are retained.
+An English, build-free HTML/CSS/JavaScript handoff of the existing RentIt design. The original forest-green palette, warm backgrounds, photography, typography, cards and responsive layouts are retained.
 
 ## Open the project
 

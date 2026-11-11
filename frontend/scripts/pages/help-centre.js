@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the help centre screen using the shared TradeIt design system.
+ * Render the help centre screen using the shared RentIt design system.
  * @returns {string} HTML for this view.
  */
 function renderHelpCentrePage() {

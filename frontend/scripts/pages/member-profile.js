@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the member profile screen using the shared TradeIt design system.
+ * Render the member profile screen using the shared RentIt design system.
  * @param {*} publicView See docs/ARCHITECTURE.md for data flow and page variants.
  * @returns {string} HTML for this view.
  */

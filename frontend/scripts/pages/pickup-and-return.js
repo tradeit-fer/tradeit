@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the pickup and return screen using the shared TradeIt design system.
+ * Render the pickup and return screen using the shared RentIt design system.
  * @param {*} isReturn See docs/ARCHITECTURE.md for data flow and page variants.
  * @returns {string} HTML for this view.
  */

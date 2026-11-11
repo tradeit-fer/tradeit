@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Render the authentication screen using the shared TradeIt design system.
+ * Render the authentication screen using the shared RentIt design system.
  * @param {*} mode See docs/ARCHITECTURE.md for data flow and page variants.
  * @returns {string} HTML for this view.
  */
@@ -23,7 +23,7 @@ function renderAuthenticationPage(mode = "login") {
           ${renderAvatar("ana")}
           <div>
             <h4>“Exactly what I need. Just when I need it.”</h4>
-            <p class="small">Ana · TradeIt community member · example profile</p>
+            <p class="small">Ana · RentIt community member · example profile</p>
           </div>
         </div>
       </section>

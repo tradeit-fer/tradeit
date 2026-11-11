@@ -1,6 +1,6 @@
 # Design system
 
-The existing TradeIt visual language is retained: warm light surfaces, deep green actions, sage/lime accents, rounded cards, photography and generous spacing.
+The existing RentIt visual language is retained: warm light surfaces, deep green actions, sage/lime accents, rounded cards, photography and generous spacing.
 
 ## Design tokens
 

@@ -5,14 +5,14 @@
 "use strict";
 
 /**
- * Render the messages screen using the shared TradeIt design system.
+ * Render the messages screen using the shared RentIt design system.
  * @returns {string} HTML for this view.
  */
 function renderMessagesPage() {
   const contacts = [
     ["marko", "Marko Kovač", "See you tomorrow at 10!", "10:24"],
     ["ana", "Ana Horvat", "Thanks, the speaker was great!", "Yesterday"],
-    ["support", "TradeIt support", "We have reviewed your request.", "10 Oct"],
+    ["support", "RentIt support", "We have reviewed your request.", "10 Oct"],
   ];
   const selected = contacts.find((c) => c[0] === appState.chat) || contacts[0];
   return renderAccountLayout(
