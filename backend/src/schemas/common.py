@@ -1,0 +1,1 @@
+# mjesto za općenite strukture podataka koje dijeli cijeli API
