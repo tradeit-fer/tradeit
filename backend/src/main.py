@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 
 from src.dependencies import get_db # dohvaćanje sesije baze podataka
+from src.controllers import listings
 
 app = FastAPI(
     title="TradeIt API",
@@ -24,6 +25,8 @@ app.add_middleware(
     allow_methods = ["*"],    # dopuštene GET, PUT, PATCH, POST, DELETE,...
     allow_headers = ["*"],  # dopušteni Authorization, Content-Type, itd...
 )
+
+app.include_router(listings.router)
 
 @app.get("/")
 def home():
