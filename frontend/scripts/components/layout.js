@@ -115,6 +115,12 @@ function renderAccountSidebar(admin = false) {
       <p>Every rental gives things another chance.</p>
       ${renderLink("new-listing", "Create your first listing", "arrow", "link mt12")}
     </div>
+    <button
+    type="button"
+    class="side-link"
+    data-action="logout">
+    Logout
+  </button>
   </aside>`;
 }
 

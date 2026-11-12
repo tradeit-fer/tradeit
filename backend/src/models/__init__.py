@@ -8,6 +8,7 @@ from src.models.rental_request import RentalRequest
 from src.models.rentals import Rental
 from src.models.rental_terms import RentalTerms
 from src.models.reviews import Review
+from src.models.auth_sessions import AuthSession
 
 __all__ = [
     "User",
@@ -20,4 +21,5 @@ __all__ = [
     "Rental",
     "RentalTerms",
     "Review",
+    "AuthSession",
 ]

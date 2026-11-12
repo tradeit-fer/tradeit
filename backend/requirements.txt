@@ -4,5 +4,8 @@ sqlalchemy
 alembic
 psycopg[binary]
 python-dotenv
-pytest
+authlib
+itsdangerous
+httpx
 httpx2
+pytest

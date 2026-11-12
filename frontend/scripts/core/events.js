@@ -410,8 +410,18 @@ document.addEventListener("click", async (event) => {
       );
       break;
     case "google-login":
-      navigateTo("dashboard");
-      showToast("Welcome to TradeIt. Google sign-in is not connected.");
+      window.location.href =
+        "http://localhost:8000/api/v1/auth/google";
+      break;
+    case "logout":
+      try {
+          await authService.logout();
+          navigateTo("login");
+          showToast("Successfully logged out.");
+      } catch (error) {
+          console.error(error);
+          showToast("Logout failed. Please try again.");
+      }
       break;
     case "password": {
       const p = selectElement("#auth-password");
@@ -475,7 +485,7 @@ document.addEventListener("click", async (event) => {
   }
 });
 
-document.addEventListener("submit", (event) => {
+document.addEventListener("submit", async (event) => {
   const form = event.target;
   if (!(form instanceof HTMLFormElement)) return;
   event.preventDefault();
@@ -650,12 +660,7 @@ document.addEventListener("submit", (event) => {
       showToast("Reply added to the sample request.");
       break;
     case "auth-form":
-      if (form.dataset.mode === "register" && !f.has("auth-terms")) {
-        showToast("Please agree to the User Agreement to create an account.");
-        break;
-      }
-      navigateTo("dashboard");
-      showToast("Welcome to TradeIt.");
+      showToast("Please continue with Google to sign in.");
       break;
     case "forgot-form":
       showModal(
