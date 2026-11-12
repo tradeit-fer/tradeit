@@ -13,6 +13,7 @@ erDiagram
     users ||--o{ reviews : writes
     users ||--o{ reviews : receives
     rentals ||--o{ reviews : has
+    auth_sessions }o--|| users : identifies
     users {
         string id PK
         string name
@@ -87,5 +88,14 @@ erDiagram
         int rating
         string comment
         timestamp created_at
+    }
+    auth_sessions{
+        str id PK
+        str user_id FK
+        str token_hash
+        str csrf_token_hash
+        datetime created_at
+        datetime expires_at
+        datetime revoked_at
     }
 ```

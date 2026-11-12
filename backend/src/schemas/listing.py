@@ -33,7 +33,7 @@ class OwnerInfo(BaseModel):
 class ListingCreate(BaseModel):
     title: str = Field(..., example = "Bušilica Bosch")
     description: Optional[str] = Field(None, example= "Aku bušilica s dvije baterije.")
-    price_per_day: float = Field(..., example = 500)    # cijena u centima
+    price_per_day: int = Field(..., example = 500)    # cijena u centima
     deposit: int = Field(..., example = 2000)           # polog u centima
     category: str = Field(..., example = "Alati")  
     location: str = Field(..., example = "Zagreb, Trešnjevka")  
